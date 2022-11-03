@@ -21,10 +21,11 @@
         display: flex;
     }
     .image-section{
-        background: url(https://res.cloudinary.com/dpokiomqq/image/upload/v1630073961/personal_yeatfw.jpg);
+        /* background: url(https://res.cloudinary.com/dpokiomqq/image/upload/v1630073961/personal_yeatfw.jpg); */
         background-repeat: no-repeat;
-        width:40%;
+        width:80%;
         height: 100vh;
+        object-fit: cover;
     }
     .form-section{
         width:60%;
@@ -88,8 +89,11 @@
 </head>
 <body>
     <main id="auto-layout">
-        <div class="image-section">   
+
+        <div class="image-section">  
+            <img src="https://res.cloudinary.com/dpokiomqq/image/upload/v1630073961/personal_yeatfw.jpg" class="image-section" alt="image_of_a_man"/> 
         </div>
+
         <div class="form-section">
             <div class="logo-section">
                 <img src="https://res.cloudinary.com/dpokiomqq/image/upload/v1630074151/logo_khjgnh.png" alt="kodecamp">
@@ -99,7 +103,7 @@
                   <h1>Sign Up</h1>   
                 </header>
                 
-                     <form action="">
+                     <form action="#">
                         <div class="form-row">
                             <div class="input-box">
                                 <label for="firstname">First Name</label><br>
@@ -129,19 +133,20 @@
                         </div>  
                         <div class="form-row">
                             <div class="input-box">
-                                <label for="password"> Password</label><br>
-                                <input type="password" id="password" class="box" placeholder="*******">
+                                <label for="password" id="password"> Password</label><br>
+                                <input type="password" id="password" aria-labelledby="password" class="box" placeholder="*******">
                             </div>
                         
                             <div class="input-box">
-                                <label for="password"> Confirm Password</label><br>
-                                <input type="password" id="password"  class="box"  placeholder="confirm password">
+                                <label for="password" id="confirm_password"> Confirm Password</label><br>
+                                <input type="password" id="password"  class="box" aria-labelledby="confirm_password" placeholder="confirm password">
                             </div>
                         </div>  
                         <div class="form-row">
                             <div class="input-box">
-                                <label for="education"> Educational level</label><br>
-                                <select name="level" id="education">
+
+                                <label for="education">Educational level:</label>
+                                <select name="education" id="education">
                                     <option value="Graduate">Graduate</option>
                                     <option value="Undergraduate">Undergraduate</option>
                                     <option value="Postgraduate">Postgraduate</option>
@@ -150,7 +155,7 @@
                         
                             <div class="input-box">
                                 <label for="experience"> Experience level</label><br>
-                                <select id="Experience">
+                                <select id="experience" name="experience">
                                     <option value="Novice">Novice</option>
                                     <option value="Beginner">Beginner</option>
                                     <option value="Intermediate">Intermediate</option>
@@ -160,7 +165,7 @@
                         </div>  
                         <div class="form-row">
                             <div class="textarea-section">
-                                <label for="textarea" name="textarea" rows="10" cols="50"></label> Tell us about you</label><br>
+                                <label for="textarea" name="textarea" rows="10" cols="50">Tell us about you</label><br>
                                 <textarea id="textarea"></textarea>
                             </div>
                         </div>
